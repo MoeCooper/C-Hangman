@@ -61,3 +61,7 @@ int getSecretPhrase(char secretPhrase[], int maxLength){
 
     return strlen(secretPhrase);
 }
+
+char getCharacter(const char* prompt, const char* error){
+
+}
