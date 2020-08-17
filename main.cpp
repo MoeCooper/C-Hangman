@@ -26,8 +26,9 @@ void playGame(){
     // char pointer to hidden phrase, this will be from heap memory
     char* hiddenPhrase = nullptr;
     int numberOfGuessLeft = MAX_NUMBER_OF_GUESSES;
-
-    getSecretPhrase(secretPhrase, MAX_LENGTH_OF_SECRET_PHRASE);
+ 
+    // the length of the secret phrase is stored into secretPhraseLength variable
+    int secretPhraseLength = getSecretPhrase(secretPhrase, MAX_LENGTH_OF_SECRET_PHRASE);
 }
 
 // user inputs secret phrase
@@ -57,6 +58,6 @@ int getSecretPhrase(char secretPhrase[], int maxLength){
             }
         }
     } while(failure);
-    
+
     return strlen(secretPhrase);
 }
